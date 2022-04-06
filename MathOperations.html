@@ -187,12 +187,23 @@
                 }
                 else inputAnswer.style.backgroundColor = "orange";
             }
-            endTime = Math.round((Date.now() - startTime) / 1000);
-            seconds = Math.round(endTime % 60);
-            endTime /= 60;
-            minutes = Math.round(endTime % 60);
-            endTime /= 60;
-            hours = Math.round(endTime % 24);
+
+            // Calculating time taken
+            endTime = Date.now() - startTime;
+            console.log(endTime);
+            
+            endTime = Math.round(endTime / 1000);
+            console.log(endTime);
+
+            // Calculating time taken in seconds
+            seconds = endTime % 60;
+            endTime = Math.floor(endTime / 60);
+            console.log(endTime);
+            minutes = endTime % 60;
+            endTime = Math.floor(endTime / 60);
+            console.log(endTime);
+            hours = endTime % 24;
+
             attempted = correct + wrong;
             notAttempted = inputCountOfQuestions - attempted;
             if (attempted > 0) accuracyPercentage = (correct/attempted) * 100;
