@@ -1,1 +1,1 @@
-# javascript-onepage-codes
+# javascript-codes
