@@ -9,4 +9,4 @@
 - To quickly generate password
 
 ### NumberToWords.html
-- Gives word representation of the word
+- Gives word representation of a number
